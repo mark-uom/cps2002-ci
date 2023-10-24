@@ -21,4 +21,10 @@ public class CalculatorTests {
         assertEquals(5, calc.add(2,3));
     }
 
+    @DisplayName("Check if 15 and -2 make 13.")
+    @Test
+    void testAddNegativeNumber() {
+        assertEquals(13, calc.add(15,-2));
+    }
+
 }
