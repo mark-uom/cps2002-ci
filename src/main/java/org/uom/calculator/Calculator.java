@@ -18,6 +18,8 @@ public class Calculator {
         return sum;
     }
     
+    public int reminder(int x, int y) {return x % y;}
+
     public int times(int x, int y) {
         return x*y;
     }
