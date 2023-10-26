@@ -4,27 +4,43 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTests {
 
     Calculator calc;
+    ArrayList<Integer> numbers;
 
     @BeforeEach
     void beforeEach() {
         calc = new Calculator();
+        numbers = new ArrayList<>();
     }
 
-    @DisplayName("Check if 2 and 3 make 5.")
+    @DisplayName("Check if an empty array make 0.")
     @Test
-    void testAdd() {
-        assertEquals(5, calc.add(2,3));
+    void testAddEmptyArray() {
+        assertEquals(0, calc.add(numbers));
+    }
+
+    @DisplayName("Check if an 5 and 2 makes 7.")
+    @Test
+    void testAddPositiveNumbers() {
+        numbers.add(5);
+        numbers.add(2);
+
+        assertEquals(7, calc.add(numbers));
     }
 
     @DisplayName("Check if 15 and -2 make 13.")
     @Test
     void testAddNegativeNumber() {
-        assertEquals(13, calc.add(15,-2));
+        numbers.add(15);
+        numbers.add(-2);
+
+        assertEquals(13, calc.add(numbers));
     }
 
     @Test
