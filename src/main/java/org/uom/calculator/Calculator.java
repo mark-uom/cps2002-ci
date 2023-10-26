@@ -5,6 +5,12 @@ public class Calculator {
         return x + y;
     }
 
+    public int reminder(int x, int y) {return x % y;}
+
+    public int times(int x, int y) {
+        return x*y;
+    }
+
     public int max(int[] array){
         if (array.length == 0) {
             return 0;

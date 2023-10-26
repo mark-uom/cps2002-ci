@@ -38,4 +38,12 @@ public class CalculatorTests {
         int[] array = {13,25,23,15,99,234,-123};
         assertEquals(234, calc.max(array));
     }
+
+    @Test
+    void testReminder(){
+        assertEquals(2, calc.reminder(5,3));
+        assertEquals(1,calc.reminder(10,9));
+        assertEquals(4, calc.reminder(10,6));
+        assertEquals(0,calc.reminder(10,5));
+    }
 }
