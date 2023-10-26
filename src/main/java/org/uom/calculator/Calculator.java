@@ -29,6 +29,17 @@ public class Calculator {
         return x*y;
     }
 
+    public int times(int[] x){
+        if (array.length == 0) {
+            return 0;
+        }
+        int aux = 0;
+        for(int i : x){
+            aux = aux * i;
+        }
+        return aux;
+    }
+
     public int subtract(int x, int y) {
         return x - y;
     }
