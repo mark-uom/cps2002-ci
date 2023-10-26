@@ -27,4 +27,6 @@ public class CalculatorTests {
         assertEquals(13, calc.add(15,-2));
     }
 
+    @Test
+    void testAddStringParameter(){ assertEquals(16, calc.add("13,4,-3,2"));}
 }
