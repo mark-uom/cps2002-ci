@@ -34,4 +34,11 @@ public class CalculatorTests {
         assertEquals(4, calc.reminder(10,6));
         assertEquals(0,calc.reminder(10,5));
     }
+
+    @DisplayName("Check if 5 subtracted by 2 equals 3")
+    @Test
+    void testSubtract() {
+        assertEquals(3, calc.subtract(5, 2));
+    }
+
 }
