@@ -34,6 +34,9 @@ public class CalculatorTests {
     }
 
     @Test
+    void testAddStringParameter(){ assertEquals(16, calc.add("13,4,-3,2"));}
+    
+    @Test
     void testReminder(){
         assertEquals(2, calc.reminder(5,3));
         assertEquals(1,calc.reminder(10,9));
