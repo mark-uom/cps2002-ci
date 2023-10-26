@@ -50,8 +50,20 @@ public class CalculatorTests {
     }
 
     @Test
+    void testMaxEmptyArray(){
+        int[] array = {};
+        assertEquals(0, calc.max(array));
+    }
+
+    @Test
+    void testMaxWithArray(){
+        int[] array = {13,25,23,15,99,234,-123};
+        assertEquals(234, calc.max(array));
+    }
+
+    @Test
     void testAddStringParameter(){ assertEquals(16, calc.add("13,4,-3,2"));}
-    
+
     @Test
     void testReminder(){
         assertEquals(2, calc.reminder(5,3));
