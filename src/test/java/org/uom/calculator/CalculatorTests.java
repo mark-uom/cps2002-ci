@@ -27,4 +27,15 @@ public class CalculatorTests {
         assertEquals(13, calc.add(15,-2));
     }
 
+    @Test
+    void testMaxEmptyArray(){
+        int[] array = {};
+        assertEquals(0, calc.max(array));
+    }
+
+    @Test
+    void testMaxWithArray(){
+        int[] array = {13,25,23,15,99,234,-123};
+        assertEquals(234, calc.max(array));
+    }
 }
