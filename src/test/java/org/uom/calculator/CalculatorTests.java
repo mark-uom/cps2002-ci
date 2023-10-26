@@ -21,6 +21,12 @@ public class CalculatorTests {
         assertEquals(5, calc.add(2,3));
     }
 
+    @DisplayName("Check if 5 times 3 make 15.")
+    @Test
+    void testTimes() {
+        assertEquals(15, calc.times(5,3));
+    }
+
     @DisplayName("Check if 15 and -2 make 13.")
     @Test
     void testAddNegativeNumber() {
@@ -49,4 +55,11 @@ public class CalculatorTests {
         assertEquals(4, calc.reminder(10,6));
         assertEquals(0,calc.reminder(10,5));
     }
+
+    @DisplayName("Check if 5 subtracted by 2 equals 3")
+    @Test
+    void testSubtract() {
+        assertEquals(3, calc.subtract(5, 2));
+    }
+
 }
